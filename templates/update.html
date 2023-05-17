@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Attrition</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon.png" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.6.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <link rel="stylesheet" href="../static/style1.css" type="text/css">
+    <meta charset="ISO-8859-1">
+    <title>Update</title>
+</head>
+<body>
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+       
+
+      
+    </div>
+  </div>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+    
+            <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="../static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{{ url_for('login')}}">Home</a></li>
+           
+          <li><a class="nav-link scrollto" href="{{ url_for('login')}}">Login</a></li>
+	<li><a class="nav-link scrollto" href="{{ url_for('view')}}">Employee Details</a></li>
+	<li><a class="nav-link scrollto" href="{{ url_for('update')}}">Update</a></li>
+	<li><a class="nav-link scrollto" href="{{ url_for('attrition')}}">Predict Attrition</a></li>
+	<li><a class="nav-link scrollto" href="{{ url_for('graph')}}">Graphical Analysis</a></li>
+
+
+		         
+        
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      
+
+    </div>
+  </header><!-- End Header -->
+
+    <form action="/home">
+        <button type="Submit" class="btnhome">Home</button>
+    </form>
+    <form action="/updateDet">
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
+                    <h1>Update Employee Details</h1>
+                </div>
+                <div class="login-form">
+                    <div class="control-group">
+                        <input type="number" name="id" placeholder="Employee ID" class="login-field"><br><br>
+                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
+                    <div class="control-group">
+                        <span class="custom-dropdown">
+                            <select name="parameter" value="">
+                                <option value="">Select Parameter</option>
+                                <option value="DistanceFromHome">Distance From Home</option>
+                                <option value="JobSatisfaction">Job Satisfaction</option>
+                                <option value="MonthlyIncome">Monthly Income</option>
+                                <option value="OverTime">Over Time</option>
+                                <option value="PercentSalaryHike">Percent Salary Hike</option>
+                                <option value="YearsInCurrentRole">Years In Current Role</option>
+                                <option value="YearsSinceLastPromotion">Years Since Last Promotion</option>
+                            </select><br><br>
+                        </span>
+                        <input type="number" name="paramvalue" placeholder="value" class="login-field"><br><br>
+                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
+                    <div class="control-group">
+                        <span class="custom-dropdown">
+                            <select name="JobRole" value="">
+                                <option value="">Job Role</option>
+                                <option value="Sales Executive">Sales Executive</option>
+                                <option value="Research Scientist">Research Scientist</option>
+                                <option value="Laboratory Technician">Laboratory Technician</option>
+                                <option value="Manufacturing Director">Manufacturing Director</option>
+                                <option value="Healthcare Representative">Healthcare Representative</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Sales Representative">Sales Representative</option>
+                                <option value="Research Director">Research Director</option>
+                                <option value="Human Resources">Human Resources</option>
+                            </select><br><br>
+                        </span>
+                    </div>
+                    <div class="control-group">
+                        <span class="custom-dropdown">
+                            <select name="MaritalStatus" value="">
+                                <option value="">Marital Status</option>
+                                <option value="Married">Married</option>
+                                <option value="Single">Single</option>
+                                <option value="Divorced">Divorced</option>
+                            </select><br><br>
+                        </span>
+                    </div>
+                    <button type="Submit" class="btn btn-primary btn-large btn-block">Submit</button><br>
+                    <button type="reset" class="btn btn-primary btn-large btn-block">Clear</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
